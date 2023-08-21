@@ -5,11 +5,14 @@ var router = express.Router();
 var skillsCtrl = require('../controllers/skills');
 
 
-// All actual paths start with "/todos"
+//router.get('/', skillsCtrl.index);
 
-// GET /todos
-router.get('/', skillsCtrl.index);
-// GET /todos/:id
+router.get('/new', skillsCtrl.new)
+
+router.get('/', skillsCtrl.create)
+
+//router.get('/:id', skillsCtrl.delete)
+
 router.get('/:id', skillsCtrl.show);
 
 module.exports = router;
